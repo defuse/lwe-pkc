@@ -25,7 +25,7 @@ class PsiAlphaSampler
 
     # XXX: Who knows how secure this gem is (probably not at all...)
     gen = Rubystats::NormalDistribution.new(0, LWECore::PARAM_ALPHA * LWECore::PARAM_Q.to_f / Math.sqrt(2 * Math::PI))
-    # XXX: Whould there be an abs be there or are negative values done correctly?
+    # XXX: Should there be an abs be there or are negative values done correctly?
     return FieldQElement.new(gen.rng().round().to_i % @prime)
   end
 end
