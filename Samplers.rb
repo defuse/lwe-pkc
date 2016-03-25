@@ -1,5 +1,6 @@
 
 require 'rubystats'
+require_relative 'LWE'
 
 # XXX: Use a CSPRNG for the samplers
 
